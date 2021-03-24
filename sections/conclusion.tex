@@ -1,0 +1,15 @@
+\section{Conclusion and Future Work} 
+\label{sec:conclusion}
+This paper showed how to build an imitation model by learning stair climbing trajectories using mocap and GMM/GMR. This work showed a trajectory generation of the joint motion for the exoskeleton's joint to be generalized so it can be used by people of all leg lengths on variable stair heights. Increasing the amount of subjects can improve the robustness of the model. To climb the stairs, the left and right feet take turns ascending to the same step. The trajectories were trained on subjects of different heights, ages, and genders. By training in task space, only the location of the toe is required. The joint angles are calculated using inverse kinematics and the height of the person wearing the exoskeleton. This can also be applied to a bipedal walking robot to train it to climb stairs. Future research can explore out-of-plane movement using a similar framework. 
+
+The model can handle different stair heights by changing the start and goal inputs.  The model was optimized using the Bayesian information criterion to find the correct number of bins. This score ensured that the forcing function was not over or under fitted to the data set. The next step is to integrate a motion controller for the exoskeleton to generate the necessary torques. Integrating a sensor to detect the stair location will prevent collisions and automatically generate the start and goal positions for the trajectory generation.  
+
+All data used in this paper is available here: \url{https://github.com/WPI-AIM/AIM_GaitData.git}
+The code for extracting, analyzing, and modeling is located here: \url{https://github.com/WPI-AIM/AIM\_GaitAnalysisToolkit}
+
+% This paper showed that a stair-climbing motion could be abstracted across both subjects and stair heights. This paper also showed the generation of a model based on the collected data. This model can then be used to climb upstairs to different heights without the need to encode different climbing plans. Also, by using motion capture data, the replicated motion will be bio-mechanically correct. By increasing the number of demonstrations used, the model will track climbing motion closer. It is essential to collect a large sample size of data.  
+
+% Increasing the number and variety of training demonstrations can decrease the imitation cost. Increasing the demonstrations also makes the model more robust and adaptive to a broader range of situations than those models trained from a few examples. However, it is essential to quantify the number of examples required during the training process.   
+
+% This paper presents a method of trajectory generation for stair climbing. In the future, this method could be extended for gaiting. The next step is to integrate a motion controller for the exoskeleton to generate the necessary torques. Integrating a sensor to detect the stair location will prevent collisions and automatically generate the start and goal positions for the trajectory generation.  
+
