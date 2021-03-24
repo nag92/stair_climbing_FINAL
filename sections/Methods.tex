@@ -134,7 +134,7 @@ DMPs work by encoding the force profile during the trajectory. The first and sec
     \label{eq:force}
 \end{equation}
 
-% GMM is similar to K-means in that it assigns points to clusters. GMM improvement assigns a probability to the point belonging to a cluster. 
+
 
 The Expectation-Maximization (EM) algorithm iteratively updates the probabilities of the points. The EM algorithm is used to find the optimal mean and covariance of each of the Gaussian. The goal of the EM algorithm is to find similar points in the demonstrations and group them together into clusters. \autoref{eq:Estep} and \autoref{eq:Mstep} show the two steps in the EM algorithm. In these equations, $X$ is the point vector, $h$ is the posture probability, $\pi$ is the weighting coefficient for each point, $\mu$ is mean, and $ \Sigma $ is the co-variance.  K-means is used to find the initial guess of the $\mu$ and $\Sigma$ parameters for the EM algorithm with the value of $\pi$ initialized randomly. The GMM/GMR code used in this paper were based on Calinon open-source libraries \cite{Calinon19MM} \cite{CalinonLee19} \cite{Calinon16JIST}. 
 
@@ -154,7 +154,6 @@ M(aximization)-step:
 \label{eq:Mstep} 
 \end{equation} 
 
-% The number of bins $K$ has to be set for the model. The model output is very sensitive to the number of bins set. If there are too many, the model will overfit to the data set; while if there are too few, the model will be poorly fit.
 
 The number of bins $ K $ can be found using the Bayesian Information Criterion (BIC). If too few bins are used, the model will be poorly fit; if too many are used, it will over-fit to the demonstrations. BIC is a method to overcome this limitation and find the optimal number of bins. \autoref{eq:BIC} calculates the BIC score; it is a trade-off between optimizing the likelihood and minimizing the number of states to encode.  $\mathcal{L}$ is the log-likelihood, $ N $ is the number of mixture models, $ K $ is the number of components, and $ D $ is the dimension of the data points. \cite{calinon2007learning, billard2006discriminative}. 
 

@@ -27,20 +27,6 @@ Data was collected on the trajectories of the eleven subjects from the lowest st
 
 
 
-% \begin{figure} [h]
-%     \centering 
-%     \includegraphics[frame, scale=0.5]{images/ytraj.png} 
-%     \caption{Subject Y Trajectories} 
-%     \label{fig:ytraj} 
-% \end{figure} 
-
-% \begin{figure} [h]
-%     \centering 
-%     \includegraphics[frame, scale=0.5]{images/ztraj.png} 
-%     \caption{Subject Z Trajectories} 
-%     \label{fig:ztraj} 
-% \end{figure} 
-
 
 \begin{figure}[h]
      \centering 
@@ -113,38 +99,6 @@ Data was collected on the trajectories of the eleven subjects from the lowest st
 \autoref{fig:compare_methods} shows an example trajectory compared to that of a model trained from the motion of only a single subject and the model trained on all eight subjects. \autoref{tab:error} shows the imitation cost for a model trained with a single subject and a model trained using multiple subjects (see \autoref{eq:metric}). Both models were compared against a demonstration that was not used to train either model.  
 
 
-% \begin{figure} 
-%     \centering 
-%     \includegraphics[frame, scale=0.5]{images/compy.png} 
-%     \caption{Multiple vs single examples for Toe(Y) trajectory} 
-%     \label{fig:compare_methodsy} 
-% \end{figure} 
-
-% \begin{figure} 
-%     \centering 
-%     \includegraphics[frame, scale=0.5]{images/compz.png} 
-%     \caption{Multiple vs single examples for Toe(Z) trajectory} 
-%     \label{fig:compare_methodsz} 
-% \end{figure} 
-
-% \begin{figure}[h]
-%     \centering
-%     \begin{subfigure} {\linewidth} 
-%         \centering 
-%         \includegraphics[frame, scale=0.5]{images/compy.png} 
-%         \caption{Multiple vs single examples for Toe(Y) trajectory} 
-%         \label{fig:compare_methodsy} 
-%     \end{subfigure} 
-% 
-%     \begin{subfigure} {\linewidth} 
-%         \centering 
-%         \includegraphics[frame, scale=0.5]{images/compz.png} 
-%         \caption{Multiple vs single examples for Toe(Z) trajectory} 
-%         \label{fig:compare_methodsz} 
-%     \end{subfigure} 
-%     \caption{Comparison of a demonstration against a model trained on a single demonstration and a model trained on multiple demonstrations.}
-%     \label{fig:comparison}
-% \end{figure}
 
 \begin{figure}[h]
     \centering 
@@ -180,34 +134,10 @@ Data was collected on the trajectories of the eleven subjects from the lowest st
     \label{fig:singleSubject}
 \end{figure}
 
-% \begin{figure}[h]
-%   \centering 
-%   \begin{subfigure}{\linewidth} 
-%     \centering 
-%     \includegraphics[frame, scale=0.17]{images/config0.png} 
-%     \caption{Using config0 to learn} 
-%     \label{fig:config0} 
-%   \end{subfigure} 
-%     \begin{subfigure}{\linewidth} 
-%     \centering 
-%     \includegraphics[frame, scale=0.17]{images/config3.png} 
-%     \caption{Using config3 to learn} 
-%     \label{fig:config3} 
-%   \end{subfigure}   
-%   \caption{A model trained on single subject and single configuration, reproducing the motion climbing different stair heights. The solid lines are the marker trajectories. The dotted lines are the reproduced trajectories using the model \autoref{fig:config3} that was trained on stair config3. The dotted lines should converge to the solid lines.} 
-%   \label{fig:singleSubject} 
-% \end{figure}   
-
 
 Using the inverse kinematics and the anthropomorphic parameters, the joint angle can be calculated. \autoref{fig:stairsclimbing} shows the movement of the leg through a stepping trajectory. The trajectory of the toe is being controlled. The joint angles at each instance are determined using inverse kinematics. The ankle is constrained to be parallel to the ground. This constraint is to prevent the toe from catching on the edge of the stairs.
 
 
-% \begin{figure}
-%     \centering
-%     \includegraphics[scale=0.20]{images/stairs_climb.png}
-%     \caption{The leg motion over the stepping trajectory while keeping the ankle parallel with the ground. Inverse kinematics was then used to solve for the joint angles.}
-%     \label{fig:stairsclimbing}
-% \end{figure}
 
 \begin{figure}[h!]
   \centering 
@@ -226,11 +156,4 @@ Using the inverse kinematics and the anthropomorphic parameters, the joint angle
   \caption{Control of the leg from the ground to the first step. The joint angle are calculated and compared to the measured joint angles. } 
   \label{fig:singleSubject} 
 \end{figure}   
-
-% \begin{figure}
-%     \centering 
-%     \includegraphics[frame, scale=0.16]{images/climbing_stair.png} 
-%     \caption{The leg motion over the stepping trajectory while keeping the ankle parallel with the ground. Inverse kinematics was then used to solve for the joint angles.} 
-%     \label{fig:stairsclimbing} 
-% \end{figure} 
 
